@@ -55,13 +55,20 @@ The script necessitates three arguments while execution:
 python client.py <server_address> <server_port> <filename>
 
 ## Problems Encountered and Solutions
-- **Problem 1**: Description of the problem and how it was resolved.
-- **Problem 2**: Explanation of the issue and the solution implemented.
+Problem 1: Socket binding failure
 
+Description: The socket encountered an issue binding to a port due to an "Address already in use" error.
+Solution: To resolve this problem, identify the process using the specified port and terminate it. Alternatively, you can change the port number or wait for the system to release the port.
+Problem 2: Handshake failure during SYN packet exchange
+
+Explanation: SYN packets weren't received by the server, causing a handshake failure.
+Solution: Check the network connectivity between the client and server. Ensure the server is up and running. Verify firewall settings and ensure no packet loss during transmission.
 ## Additional Libraries Used
 - List any external libraries utilized in the project and their purposes.
 
 ## Acknowledgements
-- Mention any tutorials, online resources, or code examples used for reference.
-- Give credit to any relevant sources that contributed to your project.
+Hunt, J. (2023). Sockets in python. In Advanced Guide to Python 3 Programming (pp. 557-569). Cham: Springer International Publishing.
+Leon, J. F., Marone, P., Peyman, M., Li, Y., Calvet, L., Dehghanimohammadabadi, M., & Juan, A. A. (2022, December). A Tutorial On Combining FlexSim With Python For Developing Discrete-Event Simheuristics. In 2022 Winter Simulation Conference (WSC) (pp. 1386-1400). IEEE.
+
+https://youtu.be/_FVvlJDQTxk
 
